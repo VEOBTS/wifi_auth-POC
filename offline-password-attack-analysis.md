@@ -136,9 +136,4 @@ Documentation\
 # Conceptual Password Verification
 Once handshake data exists, researchers can demonstrate how password
 verification works.
-
-Conceptually:
-1.  Take a candidate password
-2.  Generate PMK using PBKDF2
-3.  Derive PTK using handshake values
-4.  Compare calculated MIC with captured MIC
+the entire process of capturing data and packets and isolating or testing encompasses the whole concept of offfline attacks against WPA2.
