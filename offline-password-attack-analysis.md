@@ -15,8 +15,8 @@ PBKDF2‑HMAC‑SHA1
 4096 iterations
 
 Conceptually:
-
-PMK = PBKDF2(passphrase, SSID, 4096)
+PMK = PBKDF2(passphrase, SSID, 4096) 
+The passprase is combined with the SSID of the network which is used as the salt, and the algorithm performs 4096 iterations (**amount of times it runs**) to derive a 256-bit key.
 
 Reference\
 https://www.rfc-editor.org/rfc/rfc2898
@@ -37,15 +37,14 @@ The handshake exchanges:
 • MAC addresses of both devices
 
 These values allow both sides to generate the Pairwise Transient Key
-(PTK) used to encrypt traffic. as earlier mentioned in wpa2_handshake_analysis(./wpa2_handshake_analysis.md)
+(PTK) used to encrypt traffic. as earlier mentioned in [wpa2_handshake_analysis](wpa2_handshake_analysis.md)
 
 Reference\
 https://www.rfc-editor.org/rfc/rfc5246
 
 # Lab Environment Setup
 
-To safely study Wi‑Fi authentication, I create a small wireless lab.
-
+To safely study Wi‑Fi authentication, you can create a small wireless lab.
 Components:
 
 Router / Access Point\
@@ -62,18 +61,16 @@ This ensures all testing happens on a network I control.
 
 alternatively you can run a setup using laptop(client+capture) and phone(WPA2 hotspot)
 
-#Capturing Authentication Packets
+# Capturing Authentication Packets
 
 The next step is capturing authentication packets exchanged during
 connection.
 
-Packet captures are stored in PCAP format.
-
+Packet captures are stored in PCAP format. 
 PCAP files store raw network packets exactly as they appear on the
 network.
 
 These files can later be analyzed using packet inspection tools.
-
 Common tools:
 Wireshark\
 tcpdump\
@@ -91,7 +88,8 @@ General workflow
 3.  Observe and filter out only authentication traffic (wireshark provides a GUI for easy interaction/filtering)
 4.  Save packets as a PCAP file (.pcap)
 5.  Filter the capture for handshake frames such as EAPOL key frames
-These key frames contain the messages exchanged during the WPA2 4-Way Handshake. These frames carry important authentication data including nonce
+
+**These key frames contain the messages exchanged during the WPA2 4-Way Handshake. These frames carry important authentication data including nonce**
 
 Typical Wireshark filters focus on:
 • EAPOL frames\
@@ -114,6 +112,7 @@ Nonce values\
 Integrity codes
 
 Reference\
+![IMAGE](https://ostinato.org/images/guides/rarp-wireshark.png)
 https://www.tcpdump.org/manpages/pcap.3pcap.html
 
 # Parsing PCAP Files Programmatically
