@@ -59,7 +59,7 @@ Local router configured with WPA2
 
 This ensures all testing happens on a network I control.
 
-alternatively you can run a setup using laptop(client+capture) and phone(WPA2 hotspot)
+alternatively you can run a setup using laptop(client+capture) and phone(WPA2 hotspot) or download preset or already captured files (online) to use for analysis 
 
 # Capturing Authentication Packets
 
@@ -136,4 +136,4 @@ Documentation\
 # Conceptual Password Verification
 Once handshake data exists, researchers can demonstrate how password
 verification works.
-the entire process of capturing data and packets and isolating or testing encompasses the whole concept of offfline attacks against WPA2.
+*the entire process of capturing data and packets and isolating or testing encompasses the whole concept of offfline attacks against WPA2.*
