@@ -4,7 +4,7 @@ A simple Python tool that listens on a wireless interface and detects **WPA2 han
 
 > When a device connects to a WPA2 network, the router and client exchange special packets called **EAPOL frames**.  
 > These packets form the **4-way handshake** used to establish encryption keys.
-for more information refer [here](wpa2-handshake-analysis)
+for more information refer [here](../scenarios/wpa2-handshake-analysis.md)
 
 # Requirements
 - Python 3
