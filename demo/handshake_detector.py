@@ -20,7 +20,7 @@ def main():
     print(f"[*] Sniffing on {iface} — CTRL+C to stop\n")
 
     try:
-        sniff(iface=iface, prn=got_packet, store=False)
+        sniff(iface=iface, prn=got_packet, store=False, filter='ether proto 0x888e')
     except KeyboardInterrupt:
         print("\n[!] Stopped.")
 
